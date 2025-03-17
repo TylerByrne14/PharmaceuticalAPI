@@ -131,3 +131,19 @@ curl -X POST 'http://localhost:8080/api/drugs' \
 # Get all drugs
 
 curl -X GET 'http://localhost:8080/api/drugs'
+
+### NOTES ON IMPROVEMENTS
+
+Use a postgres database for larger data volumes. I used an H2 database here since it's suitable for testing
+
+Create DTOs so I can add fields to the entity without neccessarily exposing that to the client. One example is if I wanted to add an update_date to the entity that tracks when the drug was last updated but don't want that in the response, I could create a DrugResponseDTO
+
+Assuming this API would be handling large datasets, pagination would help with scalabilty and response times making a better user experience.
+
+Include more robust error handling. This would be beneficial for clients to know what went wrong and make it easier for developers to debug
+
+Additonal Endpoints:
+
+get drugs with low stock to check what needs to be restocked by using a specified threshold. Assuming what is considered "low stock" is different for each drug, I would also consider including a restock threshold in the drug model and check if quanitity is lower than threshold instead.
+
+Update drug quanitity that increments or decrements quanity by specified amount. This would be good for bulk orders and sales.
