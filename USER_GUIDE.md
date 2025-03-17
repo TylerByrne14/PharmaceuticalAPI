@@ -12,7 +12,7 @@ A guide on how to set up, run, and test the SureCost Drug API with Swagger docum
 
 ### 1. Clone the Repository
 
-git clone <repository-url>
+git clone git@github.com:TylerByrne14/PharmaceuticalAPI.git
 cd drug-api
 
 ### 2. Build the Project
