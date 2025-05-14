@@ -17,6 +17,8 @@ cd drug-api
 
 ### 2. Build the Project
 
+build 2
+
 build in terminal:
 mvn clean install
 
